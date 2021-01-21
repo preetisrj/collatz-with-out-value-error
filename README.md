@@ -1,20 +1,17 @@
 # collazt-with-out-value-error
-def collatz(n):
-    if n %2 == 0:
-        print(int(n/2))
-        return(int(n/2))
-        
-    else:
-        print(int(n*3+1))
-        return(int(n*3+1))
-    
-    
-    
-print('Please enter a number and the Collatz sequence')
 try:
-    x = int(input())
+    x= int(input())
+    x= collatz(x)
 except ValueError:
-    print('Error invalid value plz enter integers only.')
-    
-while x != 1:
-    x = collatz(x)
+    print('hey plz enter digit')
+def collatz(n):
+    while n!=1:
+        if n%2==0:
+            n=n/2
+            print(n)
+            
+        else:
+            n=n*3+1
+            print(n)
+            
+            
